@@ -1,7 +1,15 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const CommonCard = ({isNew, count, newColor, title, icon, bgColor,onClick}) => {
+const CommonCard = ({
+  isNew,
+  count,
+  newColor,
+  title,
+  icon,
+  bgColor,
+  onClick,
+}) => {
   return (
     <View style={{width: '100%', height: 70, justifyContent: 'center'}}>
       <TouchableOpacity
@@ -14,8 +22,9 @@ const CommonCard = ({isNew, count, newColor, title, icon, bgColor,onClick}) => {
           borderTopRightRadius: 30,
           borderBottomRightRadius: 30,
           backgroundColor: bgColor ? bgColor : '#fff',
-        }} onPress={()=>{
-onClick()
+        }}
+        onPress={() => {
+          onClick();
         }}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Image
